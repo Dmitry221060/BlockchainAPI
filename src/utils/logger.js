@@ -92,7 +92,7 @@ process.on("unhandledRejection", fatalError);
 
 function fatalError(error) {
   console.error(error);
-  fs.appendFileSync("../../logs/Errors.txt", `\r\n${formatTimestamp()} ${error ? error.stack : error}`);
+  fs.appendFileSync(path.join(__dirname, "../../logs/Errors.txt"), `\r\n${formatTimestamp()} ${error ? error.stack : error}`);
   const forceQuitTimeout = 1000;
   setTimeout(() => process.exit(1), forceQuitTimeout).unref();
 }
