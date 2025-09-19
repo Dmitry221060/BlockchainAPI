@@ -33,7 +33,7 @@ export async function createApp(options: CreateAppOptions = {}) {
   app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }));
   await app.init();
 
-  await app.listen(config.getOrThrow<number>("APP_PORT"));
+  await app.listen(config.get<number>("APP_PORT") ?? 8080);
 
   return app;
 }

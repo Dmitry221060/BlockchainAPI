@@ -11,7 +11,7 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }));
   app.use(helmet());
 
-  if (config.getOrThrow<string>("NODE_ENV") == "dev") {
+  if (config.get<string>("NODE_ENV") == "dev") {
     const options = new DocumentBuilder()
       .setTitle("BlockchainAPI")
       .setDescription("https://github.com/Dmitry221060/BlockchainAPI")
@@ -21,6 +21,6 @@ async function bootstrap() {
     SwaggerModule.setup("api-docs", app, documentFactory);
   }
 
-  await app.listen(config.getOrThrow<number>("APP_PORT"));
+  await app.listen(config.get<number>("APP_PORT") ?? 8080);
 }
 void bootstrap();
