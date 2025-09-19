@@ -13,7 +13,6 @@ This is a test project, bound by specific requirements and holding little value.
 Make sure you have installed all of the following prerequisites on your development machine:
 * Git - [Download & Install Git](https://git-scm.com/downloads).
 * Node.js - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package manager.
-* MongoDB - [Download & Install MongoDB](http://www.mongodb.org/downloads).
 
 ## Installation
 1. Clone this repository with `git clone https://github.com/Dmitry221060/BlockchainAPI.git`.
