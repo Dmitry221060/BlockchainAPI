@@ -10,6 +10,7 @@ services:
       APP_PORT: ${APP_PORT:-8080}
       LOG_TO_CONSOLE: ${LOG_TO_CONSOLE:-true}
 
+      EVM_RPC_NODE: ${EVM_RPC_NODE:-https://sei-evm-rpc.publicnode.com}
       COSMOS_RPC_NODE: ${COSMOS_RPC_NODE:-https://sei-m.rpc.n0ok.net:443}
 
     healthcheck:
